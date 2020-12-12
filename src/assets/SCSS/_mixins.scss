@@ -1,0 +1,40 @@
+@mixin backgroundCC() {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+@mixin textClip() {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@mixin flexCenter() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin panel() {
+  background: #fff;
+  box-shadow: 0px 4px 10px rgba(10, 61, 128, 0.05);
+  border-radius: 3px;
+}
+
+@mixin iblock() {
+  padding: 2px;
+
+  @include panel();
+
+  &__title {
+    @include flexCenter();
+    padding: 4px 0;
+
+    color: $dark;
+  }
+  &__info {
+    @include flexCenter();
+    padding: 8px 0;
+
+    background: #f6f7f8;
+    border-radius: 2px;
+    color: $black;
+  }
+}
